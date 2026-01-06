@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workbench>
+    <!-- Basic metadata -->
+    <Name>RCProjectWorkbench</Name>
+    <Version>0.1</Version>
+    <Author>Your Name</Author>
+    <Email>you@example.com</Email>
+    <Description>
+        FreeCAD Workbench for parametric RC car projects.
+        Supports CSV/YAML-driven parameters, Git versioning, and automatic subpart loading.
+    </Description>
+    
+    <!-- FreeCAD version compatibility -->
+    <FreeCADVersion>0.20</FreeCADVersion>
+
+    <!-- Required workbenches or modules -->
+    <RequiredModules>
+        <Module>Part</Module>
+        <Module>PartDesign</Module>
+        <Module>Spreadsheet</Module>
+        <Module>ImportGui</Module>
+        <Module>FreeCADGui</Module>
+        <Module>PySide2</Module>
+        <Module>yaml</Module>
+    </RequiredModules>
+
+    <!-- Menu / toolbar -->
+    <Menu>
+        <Name>RCProject</Name>
+        <Icon>resources/rc_icon.svg</Icon>
+        <ToolBar>
+            <Command>LoadProject</Command>
+            <Command>RefreshCSV</Command>
+            <Command>ExportMeshes</Command>
+        </ToolBar>
+    </Menu>
+
+    <!-- Commands -->
+    <Commands>
+        <Command>
+            <Name>LoadProject</Name>
+            <PythonModule>RCProjectWorkbench</PythonModule>
+            <PythonClass>LoadProjectCommand</PythonClass>
+            <Icon>resources/load_icon.svg</Icon>
+            <Tooltip>Load project YAML, CSVs, subparts, and update spreadsheet.</Tooltip>
+        </Command>
+        <Command>
+            <Name>RefreshCSV</Name>
+            <PythonModule>RCProjectWorkbench</PythonModule>
+            <PythonClass>RefreshCSVCommand</PythonClass>
+            <Icon>resources/refresh_icon.svg</Icon>
+            <Tooltip>Reload CSV files and update spreadsheet parameters.</Tooltip>
+        </Command>
+        <Command>
+            <Name>ExportMeshes</Name>
+            <PythonModule>RCProjectWorkbench</PythonModule>
+            <PythonClass>ExportMeshesCommand</PythonClass>
+            <Icon>resources/export_icon.svg</Icon>
+            <Tooltip>Export all parts to meshes folder (STEP/STL).</Tooltip>
+        </Command>
+    </Commands>
+</Workbench>
