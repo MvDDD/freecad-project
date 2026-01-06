@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workbench>
     <!-- Basic metadata -->
-    <Name>RCProjectWorkbench</Name>
+    <Name>ProjectManager</Name>
     <Version>0.1</Version>
     <Author>Your Name</Author>
     <Email>you@example.com</Email>
@@ -26,8 +26,8 @@
 
     <!-- Menu / toolbar -->
     <Menu>
-        <Name>RCProject</Name>
-        <Icon>resources/rc_icon.svg</Icon>
+        <Name>ProjectManager</Name>
+        <Icon>resources/pm_icon.svg</Icon>
         <ToolBar>
             <Command>LoadProject</Command>
             <Command>RefreshCSV</Command>
@@ -39,21 +39,21 @@
     <Commands>
         <Command>
             <Name>LoadProject</Name>
-            <PythonModule>RCProjectWorkbench</PythonModule>
+            <PythonModule>ProjectManager</PythonModule>
             <PythonClass>LoadProjectCommand</PythonClass>
             <Icon>resources/load_icon.svg</Icon>
             <Tooltip>Load project YAML, CSVs, subparts, and update spreadsheet.</Tooltip>
         </Command>
         <Command>
             <Name>RefreshCSV</Name>
-            <PythonModule>RCProjectWorkbench</PythonModule>
+            <PythonModule>ProjectManager</PythonModule>
             <PythonClass>RefreshCSVCommand</PythonClass>
             <Icon>resources/refresh_icon.svg</Icon>
             <Tooltip>Reload CSV files and update spreadsheet parameters.</Tooltip>
         </Command>
         <Command>
             <Name>ExportMeshes</Name>
-            <PythonModule>RCProjectWorkbench</PythonModule>
+            <PythonModule>ProjectManager</PythonModule>
             <PythonClass>ExportMeshesCommand</PythonClass>
             <Icon>resources/export_icon.svg</Icon>
             <Tooltip>Export all parts to meshes folder (STEP/STL).</Tooltip>

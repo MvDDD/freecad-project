@@ -115,10 +115,10 @@ def load_project():
 # -----------------------------
 # Example usage
 # -----------------------------
-data, default_row = load_project()
+#data, default_row = load_project()
 
 # Access param like OpenSCAD
-wheelbase = get_param(data, "chassis.Wheelbase")
-arm_len = get_param(data, "suspension.ArmLength[2]")
+#wheelbase = get_param(data, "chassis.Wheelbase")
+#arm_len = get_param(data, "suspension.ArmLength[2]")
 
-print(f"Wheelbase: {wheelbase}, Arm length: {arm_len}")
+#print(f"Wheelbase: {wheelbase}, Arm length: {arm_len}")
